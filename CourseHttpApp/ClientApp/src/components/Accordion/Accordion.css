@@ -1,0 +1,65 @@
+html[data-theme="dark"] {
+    --background-color-accordion: #242F3D;
+    --color-accordion: #fff;
+    --hover-color-accordion: #8395DB;
+}
+
+html[data-theme="light"] {
+    --background-color-accordion: #f3f4f5;
+    --color-accordion: #83899F;
+    --hover-color-accordion: #26325c;
+}
+
+.accordion {
+    display: flex;
+    width: 300px;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 5px;
+    color: var(--color-accordion);
+    background-color: var(--background-color-accordion);
+    transition: background-color 200ms linear, color 200ms linear;
+}
+
+.accordion-item {
+    background-color: var(--background-color-accordion) !important;
+    transition: background-color 200ms linear;
+}
+
+.MuiAccordionSummary-expandIconWrapper {
+    color: var(--color-accordion);
+    transition: color 200ms linear;
+}
+
+.Mui-expanded {
+    color: var(--hover-color-accordion);
+    margin: 0 !important;
+    transition: color 200ms linear;
+}
+
+.accordion:hover {
+    color: var(--hover-color-accordion);
+    transition: color 200ms linear;
+}
+
+.accordion:hover .MuiAccordionSummary-expandIconWrapper {
+    color: var(--hover-color-accordion);
+    transition: color 200ms linear;
+}
+
+.MuiAccordionDetails-root {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 10px 0;
+}
+
+.accordion-item {
+    padding-left: 16px;
+    border: none;
+}
+
+.accordion-item:hover {
+    cursor: pointer;
+    color: #ABAAAA;
+}

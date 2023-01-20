@@ -1,0 +1,66 @@
+﻿.form_content_reg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    margin-right: auto;
+    gap: 10px;
+    margin-left: auto;
+    width: 400px;
+    height: 490px;
+    background-color: white;
+    border-radius: 10px;
+}
+.form_reg_item{
+    position: relative;
+    width: 75%;
+}
+
+.title_header_reg {
+    margin-right: 20%;
+    font-size: 30px;
+    font-weight: 500;
+}
+.title_form_reg_item{
+    padding: 0 0 5px 5px;
+}
+
+.form_reg {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 85%;
+    gap: 15px;
+}
+
+.reg_input {
+    width: 100%;
+    padding: 10px;
+    height: 35px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: none;
+    outline: 1px solid black;
+}
+
+.reg_input:hover {
+    outline: 2px solid #8888D0;
+}
+
+.reg_input:focus {
+    outline: 2px solid #2C36C6;
+}
+.reg_btn{
+    width: 70%;
+    height: 40px;
+}
+.reg_password_control{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 35px;
+    left: 210px;
+}
+.reg_error_red{
+    outline: 1px solid #E16161;
+}

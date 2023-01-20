@@ -1,0 +1,236 @@
+﻿html[data-theme='dark'] {
+    --background-color-header: #242F3D;
+    --color-nav: white;
+    --background-color-switch: #7177F8;
+    --background-color-nav: #17212B;
+    --hover-background-color-nav: #242F3D;
+}
+
+html[data-theme='light'] {
+    --background-color-header: #26325c;
+    --color-nav: #26325c;
+    --background-color-switch: rgba(131, 137, 159, 0.5);
+    --background-color-nav: white;
+    --hover-background-color-nav: #F8F9FA;
+}
+
+html[data-theme='dark'] .profile-nav {
+    border: 1px solid #2C3743;
+}
+
+a.logout {
+    color: #7F91A4;
+}
+
+a.logout:hover {
+    color: #7F91A4;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--background-color-header);
+    transition: background-color 300ms linear;
+}
+
+.header-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-right: 20px;
+}
+
+.header-logo {
+    padding-left: 50px;
+    text-decoration: none;
+    color: white;
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+.header-logo:hover {
+    color: white;
+}
+
+.header-logo b {
+    font-size: 40px;
+}
+
+.menu-item {
+    display: block;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 7px 15px;
+    z-index: 2;
+    margin-left: 40px;
+}
+
+.menu-item:hover {
+    color: white;
+    opacity: 1;
+}
+
+.menu-item-auth {
+    display: flex;
+    gap: 25px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 2px 15px;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+.profile_title {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    align-items: center;
+}
+
+.menu-item-profile {
+    position: relative;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    align-items: center;
+    padding: 7px 15px;
+    z-index: 5;
+    margin-left: 20px;
+}
+
+.menu-item-profile:hover {
+    color: white;
+    cursor: pointer;
+}
+
+.menu-item-profile:hover .arrow-profile {
+    opacity: 1;
+}
+
+.arrow-profile {
+    opacity: 0.35;
+}
+
+.link-auth {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #B2B0B0;
+    padding: 4px 10px;
+}
+
+.link-auth:hover {
+    border-color: gray;
+    color: #C7C7C7;
+    cursor: pointer;
+}
+
+.target {
+    position: absolute;
+    border-bottom: 3px solid white;
+    z-index: 1;
+    transform: none;
+}
+
+.header-link,
+.target {
+    transition: all .35s ease-in-out;
+}
+
+.active {
+    opacity: 1;
+}
+
+.no-active {
+    opacity: 0.35;
+}
+
+.switch-input {
+    display: none;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    margin: 0;
+    vertical-align: baseline;
+}
+
+.switch {
+    border-radius: 8px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-color: var(--background-color-switch);
+    cursor: pointer;
+    transition: background-color .2s ease-out;
+}
+
+.label-theme {
+    position: relative;
+    display: inline-block;
+    width: 28px;
+    height: 16px;
+}
+
+.switch::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 5px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+}
+
+.switch-input:checked + .switch::before {
+    transform: translateX(10px);
+}
+
+.profile-nav {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 230px;
+    background-color: var(--background-color-nav);
+    flex-direction: column;
+    display: flex;
+    padding: 13px 0;
+    z-index: 3;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(5, 12, 38, 0.12);
+}
+
+.profile-nav-item {
+    font-size: 18px;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: var(--color-nav);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    transition: background-color .2s ease-in-out;
+    white-space: nowrap;
+    background-color: inherit;
+    cursor: pointer;
+    padding: 4px 20px;
+}
+
+.profile-nav-item:hover {
+    color: var(--color-nav);
+    cursor: pointer;
+    background-color: var(--hover-background-color-nav);
+}
+
+.dark-theme {
+    justify-content: space-between;
+}

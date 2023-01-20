@@ -1,0 +1,146 @@
+@keyframes anitheory {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+html[data-theme="dark"] {
+    --background-color-slider: #242F3D;
+    --color-slider:white;
+    --background-color-selected: #767676;
+}
+
+html[data-theme="light"] {
+    --background-color-slider: white;
+    --color-slider:black;
+    --background-color-selected: #ECECEC;
+}
+
+article::-webkit-scrollbar {
+    width: 4px;
+    background-color: rgba(26, 24, 47, 0.1);
+    border-radius: 2px;
+    height: 20px;
+}
+
+article::-webkit-scrollbar-thumb {
+    background: #435191;
+    border-radius: 2px;
+}
+
+.section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-top: 20px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    animation: anitheory 2.5s forwards;
+    font-size: 1em;
+}
+
+.section-center {
+    display: flex;
+    height: calc(100% - 80px);
+    width: 100%;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+    background-color: var(--background-color-slider);
+    color: var(--color-slider);
+    transition: background-color 200ms linear;
+}
+
+.section-content {
+    height: max-content;
+    width: max-content;
+}
+
+.slider {
+    overflow-y: auto;
+    overflow-x: hidden;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.prev,
+.next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 5px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #83899F;
+    background-color: white;
+    border: 2px solid #26325c;
+}
+
+.pagination > ul > li > button {
+    color: var(--color-slider) ;
+    background-color: var(--background-color-slider) ;
+    transition: color 200ms linear;
+    border: 1px solid gray;
+}
+
+.Mui-selected{
+    background-color: var(--background-color-selected) !important;
+}
+
+.prev:hover, .next:hover {
+    color: #26325c;
+    background-color: #ECECEC;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev-none {
+    display: none;
+}
+
+.next-none {
+    display: none;
+}
+
+article {
+    padding: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+article.activeSlide {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+article.lastSlide {
+    transform: translateX(-100%);
+}
+
+article.nextSlide {
+    transform: translateX(100%);
+}
